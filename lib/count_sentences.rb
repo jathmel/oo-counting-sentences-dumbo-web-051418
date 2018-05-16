@@ -19,13 +19,6 @@ class String
   end
 
   def count_sentences
-   count = 0
-   self.split each do |word|
-    ifword[-1] == '.'  || word[-1] == '!' || 
-      word[-1] == '?'
-      count += 1
-    end
-   end
-   count
+   self.split(/[.?!]/).count
   end
 end
